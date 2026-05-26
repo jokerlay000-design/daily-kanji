@@ -1,0 +1,13 @@
+<h1>DailyKanji</h1>
+
+<% @kanjis.each do |kanji| %>
+  <div>
+    <h2><%= kanji.character %></h2>
+    <p>Meaning: <%= kanji.meaning %></p>
+    <p>Onyomi: <%= kanji.onyomi %></p>
+    <p>Kunyomi: <%= kanji.kunyomi %></p>
+    <p>Example: <%= kanji.example_sentence %></p>
+    <p>Level: <%= kanji.level %></p>
+    <%= link_to "Learn more", kanji_path(kanji) %>
+  </div>
+<% end %>

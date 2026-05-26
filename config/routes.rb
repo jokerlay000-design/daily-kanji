@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'kanjis/index'
+  get 'kanjis/show'
   devise_for :users
   root to: "kanjis#index"
+  resources :kanjis, only: [:show, :index]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
